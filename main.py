@@ -24,5 +24,4 @@ def root(model : MyModel):
     effects[model.effect]()
 
 
-if __name__=='__main__.py':
-    uvicorn.run(app,port=3000)
+
