@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from mystrip import MyStrip
 from pydantic import BaseModel
+from rpi_ws281x import *
 
 class MyModel(BaseModel):
     effekt : str
