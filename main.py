@@ -20,7 +20,7 @@ effects = {
 
 @app.post("/")
 def root(model : MyModel):
-    return model
+    return {"ok":True}
 
 
 
