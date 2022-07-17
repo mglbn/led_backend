@@ -3,7 +3,7 @@ from mystrip import MyStrip
 from pydantic import BaseModel
 
 class MyModel(BaseModel):
-    effect : str
+    effekt : str
 
 app = FastAPI()
 strip = MyStrip()
