@@ -14,7 +14,7 @@ class MyStrip():
 
         self.strip = PixelStrip(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
 
-        self.strip.begin
+        self.strip.begin()
 
 
     def blau(self):
@@ -22,7 +22,7 @@ class MyStrip():
         for i in range(self.strip.numPixels()):
             self.strip.setPixelColor(i,Color(0,0,255))
 
-        self.strip.show
+        self.strip.show()
 
     def rot(self):
 
