@@ -40,3 +40,10 @@ class MyStrip():
         self.strip.show()
 
 
+strip = MyStrip()
+
+strip.rot()
+
+time.sleep(10)
+
+strip.aus()
