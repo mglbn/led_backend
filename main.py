@@ -18,9 +18,9 @@ effects = {
 
 
 
-@app.get("/")
-def root():
-    return {"ok":"hahaha"}
+@app.post("/")
+def root(model : MyModel):
+    return model
 
 
 

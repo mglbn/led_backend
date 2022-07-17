@@ -40,10 +40,3 @@ class MyStrip():
         self.strip.show()
 
 
-mystrip = MyStrip()
-
-mystrip.blau()
-
-time.sleep(10)
-
-mystrip.aus()
