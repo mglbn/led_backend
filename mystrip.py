@@ -46,3 +46,4 @@ mystrip.blau()
 
 time.sleep(10)
 
+mystrip.aus()
