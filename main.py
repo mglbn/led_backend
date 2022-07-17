@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-import uvicorn
 from mystrip import MyStrip
 from pydantic import BaseModel
 
@@ -19,9 +18,9 @@ effects = {
 
 
 
-@app.post("/")
-def root(model : MyModel):
-    effects[model.effect]()
+@app.get("/")
+def root():
+    return {"ok":"hahaha"}
 
 
 
