@@ -22,7 +22,7 @@
         }
     ?>
 
-    <form action="/index.php" method="get">
+    <form action="index.php" method="get">
         <h2>Farbe einstellen</h2>
         <div>
             <input type="radio" id="rot" name="effekt" value="rot" <?php echo ($effect=='rot')?'checked':''?>>
