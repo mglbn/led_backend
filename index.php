@@ -10,8 +10,15 @@
 <body>
     <?php 
         $effect = $_POST.effekt;
+        exec("sudo touch /var/www/html/stop-script")
         if (effect=='rot'){
-            exce("sudo python -c 'import foo; print foo.hello()'")
+            exce("sudo python -c 'import mylib; rot()'")
+        }
+        if (effect=='blau'){
+            exce("sudo python -c 'import mylib; blau()'")
+        }
+        if (effect=='rot'){
+            exce("sudo python -c 'import mylib; aus'")
         }
     ?>
 
@@ -26,7 +33,7 @@
             <label for="blau">Blau</label>
         </div>
         <div>
-            <input type="radio" id="ausschalten" name="effekt" value="ausschalten" <?php echo ($effect=='ausschalten')?'checked':''?>>
+            <input type="radio" id="aus" name="effekt" value="aus" <?php echo ($effect=='aus')?'checked':''?>>
             <label for="ausschalten">Ausschalten</label>
         </div>
         <input type="submit"></input>
