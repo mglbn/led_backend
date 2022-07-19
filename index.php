@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php 
-        $effect = $_POST.effekt;
+        $effect = $_GET.effekt;
         exec("sudo touch /var/www/html/stop-script");
         if (effect=='rot'){
             exce("sudo python -c 'import mylib; rot()'");
@@ -22,7 +22,7 @@
         }
     ?>
 
-    <form action="/index.php" method="post">
+    <form action="/index.php" method="get">
         <h2>Farbe einstellen</h2>
         <div>
             <input type="radio" id="rot" name="effekt" value="rot" <?php echo ($effect=='rot')?'checked':''?>>
