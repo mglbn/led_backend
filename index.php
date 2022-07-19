@@ -10,15 +10,15 @@
 <body>
     <?php 
         $effect = $_POST.effekt;
-        exec("sudo touch /var/www/html/stop-script")
+        exec("sudo touch /var/www/html/stop-script");
         if (effect=='rot'){
-            exce("sudo python -c 'import mylib; rot()'")
+            exce("sudo python -c 'import mylib; rot()'");
         }
         if (effect=='blau'){
-            exce("sudo python -c 'import mylib; blau()'")
+            exce("sudo python -c 'import mylib; blau()'");
         }
         if (effect=='rot'){
-            exce("sudo python -c 'import mylib; aus'")
+            exce("sudo python -c 'import mylib; aus'");
         }
     ?>
 
