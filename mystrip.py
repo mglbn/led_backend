@@ -1,5 +1,5 @@
 from rpi_ws281x import *
-import time
+import time, os, sys
 class MyStrip():
 
     def __init__(self):
@@ -16,34 +16,33 @@ class MyStrip():
 
         self.strip.begin()
 
-
-    def blau(self):
-        
-        for i in range(self.strip.numPixels()):
-            self.strip.setPixelColor(i,Color(0,0,255))
-
-        self.strip.show()
-
-    def rot(self):
-
-        for i in range(self.strip.numPixels()):
-            self.strip.setPixelColor(i,Color(255,0,0))
-
-        self.strip.show()
-
-
-    def aus(self):
-
-        for i in range(self.strip.numPixels()):
-            self.strip.setPixelColor(i,Color(0,0,0))
-
-        self.strip.show()
-
-
 strip = MyStrip()
 
-strip.rot()
+def checkforend():
+    if(os.path.isfile('/var/www/4led/stop-script')):
+        os.system("sudo -u root -S rm /var/www/html/stop-script")
+        exit(0)
 
-time.sleep(10)
 
-strip.aus()
+
+def blau():
+    
+    for i in range(strip.numPixels()):
+        strip.setPixelColor(i,Color(0,0,255))
+
+    strip.show()
+
+def rot():
+
+    for i in range(strip.numPixels()):
+        strip.setPixelColor(i,Color(255,0,0))
+
+    strip.show()
+
+
+def aus():
+
+    for i in range(strip.numPixels()):
+        strip.setPixelColor(i,Color(0,0,0))
+
+    strip.show()
